@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style>
+    .logout_btn {
+      padding: 2px;
+      background: #3055fa;
+      text-decoration: none;
+      float: left;
+      margin-top: 5px;
+      margin-right: 10px;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      transition: 0.5s;
+      width: 100px;
+      text-align: center;
+
+    }
+
+    .logout_btn:hover {
+      background: #0B87A6;
+    }
+
+    .bs-example {
+      margin: 0px;
+    }
+
+    .bg-dark {
+      background-color: #197de2 !important;
+    }
+
+    .navbar-brand {
+      font-size: 20px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-md navbar-dark  fixed-top" style="background-color: rgb(245, 203, 151);">
+     
+      <a style="color: #070707; text-decoration: none" href="/">
+        <!-- <a class="navbar-brand" href="#"> -->
+          <img src="/static/image/logochhota.png" alt="Logo" style="width:40px;">
+       
+        <font face="Gill" size="6"><b>जीVAN बीMA</b></font><br />
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+          <p style="padding-left: 15px" class="nav-item nav-link active"></p>
+
+
+        </div>
+
+        <div class="navbar-nav">
+
+          <div class="right_area">
+            <a href="/aboutus" class="btn btn-outline-success" style="margin-right: 8px;">About Us</a>
+          </div>
+          <div class="right_area">
+            <a href="/contactus" class="btn btn-outline-success" style="margin-right: 8px;">Contact Us</a>
+          </div>
+          <div class="right_area">
+            <a href="/customer/customersignup" class="btn btn-outline-success" style="margin-right: 8px;">Signup</a>
+          </div>
+          <div class="right_area">
+            <a href="/login/" class="btn btn-outline-success" style="margin-right: 8px;">Login</a>
+          </div>
+          
+        </div>
+      </div>
+    </nav>
+  </div>
+</body>
+
+</html>

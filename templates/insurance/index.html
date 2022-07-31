@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<style>
+  .xyz {
+    margin-bottom: 0px;
+    background-image: url('{% static "image/homepage.jpg" %}');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<body>
+  {% include "insurance/navbar.html" %}
+  
+  <br><br>
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'image/slider-img.jpg' %}" alt="Los Angeles" width="100%" height="600" />
+        <div class="carousel-caption">
+          <h3 style="color: black;">Happy Life</h3>
+          <p style="color: black;">We had such a great time in LA!</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'image/slider-img1.jpg' %}" alt="Chicago" width="100%" height="600" />
+        <div class="carousel-caption">
+          <h3 style="color: black;">Secure Life</h3>
+          <p style="color: black;">Happy Life</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'image/slider-img2.jpg' %}" alt="New York" width="100%" height="600" />
+        <div class="carousel-caption">
+          <h3 style="color: black;">New Policy</h3>
+          <p style="color: black;" class="lead text-center" style="color: black; background-color: aquamarine;">
+            “Whole life does two things for you: Protects your family and allows you
+            to save for your future.”
+          </p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+
+  <div class="jumbotron" style="margin-top: 0px; margin-bottom: 0px">
+    <p class="lead text-center">
+      “Whole life does two things for you: Protects your family and allows you
+      to save for your future.”
+    </p>
+  </div>
+  {% if status %}
+    <script>
+        alert("{{status}}");
+        window.location="/"
+    </script>
+{% endif %}
+  {% include "insurance/footer.html" %}
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+{% extends 'insurance/adminbase.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+    
+    
+      <style media="screen">
+        a:link {
+          text-decoration: none;
+        }
+    
+        h6 {
+          text-align: center;
+        }
+    
+        .row {
+          margin: 100px;
+        }
+      </style>
+    </head>
+    
+    <div class="container">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h2 class="panel-title text-primary text-center"><b>Contact List</b></h2>
+        </div>
+        <table class="table table-hover" id="dev-table">
+          <thead>
+            <tr class="bg-success">
+    
+              <th>Name</th>
+              <th>Email</th>
+              <th>Why Contact</th>
+              <th>Date</th>
+              <th>Delete</th>
+              
+            </tr>
+          </thead>
+          {% for t in x %}
+          <tr class="table-success">
+    
+            <td><b> {{t.name}}<b></td>
+            <td><b>{{t.email}}<b></td>
+            <td><b>{{t.desc}}<b></td>
+            <td><b>{{t.date}}<b></td>
+            
+            <td><a class="btn btn-danger btn-xs" href="{% url 'delete_contact_list' t.id  %}"><i class="fas fa-trash"></i></a></td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+{% endblock content %}
